@@ -9,6 +9,8 @@ class Utilisateur {
     String mail
     String mdp
 
+    static hasMany = [commentaire : Commentaire]
+
 
     static constraints = {
         nom     blank: false, nullable: false
