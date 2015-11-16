@@ -6,6 +6,7 @@ package tdgrails
 class Utilisateur {
     String nom
     String prenom
+    String login
     String mail
     String mdp
 
