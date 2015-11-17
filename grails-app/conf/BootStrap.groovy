@@ -1,5 +1,6 @@
 import tdgrails.Commentaire
 import tdgrails.GroupePois
+import tdgrails.Image
 import tdgrails.Utilisateur
 import tdgrails.Poi
 
@@ -157,6 +158,49 @@ class BootStrap {
         p35.addToComments(co3515)
         p35.save(flush: true)
 
+        /* Création des images */
+        Image img1 = new Image(name: "image 1", path: "/usr/benathmane/img1.png").save(flush: true)
+        Image img2 = new Image(name: "image 2", path: "/usr/benathmane/img2.png").save(flush: true)
+        Image img3 = new Image(name: "image 3", path: "/usr/benathmane/img3.png").save(flush: true)
+
+        /* image ~> Poi */
+
+        Poi p41 = new Poi(description: "Poi 1 Image 4", lieu: "Casablanca", nom: "P41").save(flush: true)
+        Poi p42 = new Poi(nom: "P42", lieu:"Casablanca", description: "Poi 2 Image 5").save(flush: true)
+        Poi p43 = new Poi(nom: "P43", lieu:"Casablanca", description: "Poi 3 Image 6").save(flush: true)
+        Poi p44 = new Poi(nom: "P44", lieu:"Casablanca", description: "Poi 4 Image 7").save(flush: true)
+        Poi p45 = new Poi(nom: "P45", lieu:"Casablanca", description: "Poi 5 Image 8").save(flush: true)
+
+        Image img4 = new Image(name: "image 4", path: "/usr/benathmane/img4.png").save(flush: true)
+        Image img5 = new Image(name: "image 5", path: "/usr/benathmane/img5.png").save(flush: true)
+        Image img6 = new Image(name: "image 6", path: "/usr/benathmane/img6.png").save(flush: true)
+        Image img7 = new Image(name: "image 7", path: "/usr/benathmane/img7.png").save(flush: true)
+        Image img8 = new Image(name: "image 8", path: "/usr/benathmane/img8.png").save(flush: true)
+
+        p41.addToImgs(img4)
+        p41.save(flush: true)
+
+        p42.addToImgs(img5)
+        p42.save(flush: true)
+
+        p43.addToImgs(img6)
+        p43.save(flush: true)
+
+        p44.addToImgs(img7)
+        p44.save(flush: true)
+
+        p45.addToImgs(img8)
+        p45.save(flush: true)
+
+        /* image ~> Groupe */
+        g1.addToImgs(img1)
+        g1.save(flush: true)
+
+        g2.addToImgs(img2)
+        g2.save(flush: true)
+
+        g3.addToImgs(img3)
+        g3.save(flush: true)
     }
     def destroy = {
     }
