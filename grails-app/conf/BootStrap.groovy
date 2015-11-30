@@ -27,7 +27,7 @@ class BootStrap {
 
         Utilisateur u1 = new Utilisateur(nom:"Benathmane", prenom: "Ayoub", login: "Il_Principino", mdp: "ayoubben", mail: "ab@mbds.com").save(flush: true)
         Utilisateur u2 = new Utilisateur(nom:"Boughzaf", prenom: "Nabil", login: "Il_Cheikh", mdp: "nabilbough", mail: "nb@mbds.com").save(flush: true)
-        Utilisateur u3 = new Utilisateur(nom:"Saidi", prenom: "Marwén", login: "Il_Tounsi", mdp: "marwensai", mail: "ms@mbds.com").save(flush: true)
+        Utilisateur u3 = new Utilisateur(nom:"Saidi", prenom: "Marwen", login: "Il_Tounsi", mdp: "marwensai", mail: "ms@mbds.com").save(flush: true)
         Utilisateur u4 = new Utilisateur(nom:"Aalalou", prenom: "Soufiane", login: "Il_Aw", mdp: "soufianeaal", mail: "sa@hh.com").save(flush: true)
 
         /* 3 groupes différents */

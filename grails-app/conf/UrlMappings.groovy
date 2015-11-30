@@ -6,10 +6,10 @@ class UrlMappings {
                 // apply constraints here
             }
         }
-        /*"/"(controller: 'user', action: 'login')*/
+        "/"(controller: 'utilisateur', action: 'login')
 
         /*"/"(view:"/index")*/
-        "/"(view:"/login")
+        //"/"(view:"/login")
         "500"(view:'/error')
 	}
 }

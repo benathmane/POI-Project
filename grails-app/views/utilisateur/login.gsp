@@ -113,7 +113,7 @@
 <div id="contact">
             <h2>Autentification</h2>
 
-            <form id="ContactForm" controller="user" method='post' action='login'>
+            <form id="ContactForm" controller="#" method='post' action='#'>
 
                 <p>
                     <label>Login : </label>

@@ -100,4 +100,8 @@ class UtilisateurController {
             '*' { render status: NOT_FOUND }
         }
     }
+
+    def login()
+    {
+    }
 }

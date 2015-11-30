@@ -5,8 +5,4 @@ class UserController {
     def index()
     {
     }
-
-    def acceuil()
-    {
-    }
 }
