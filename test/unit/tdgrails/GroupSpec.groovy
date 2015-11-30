@@ -3,6 +3,8 @@ package tdgrails
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
+import java.security.acl.Group
+
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
  */
