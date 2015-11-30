@@ -1,10 +1,19 @@
 import tdgrails.Commentaire
+import tdgrails.CommentaireService
 import tdgrails.GroupePois
 import tdgrails.Image
+import tdgrails.ImageService
+import tdgrails.PoiService
 import tdgrails.Utilisateur
 import tdgrails.Poi
+import tdgrails.UtilisateurService
 
 class BootStrap {
+
+    UtilisateurService utilisateurService
+    ImageService imageService
+    PoiService poiService
+    CommentaireService commentaireService
 
     def init = { servletContext ->
         Utilisateur u = new Utilisateur()
@@ -201,6 +210,14 @@ class BootStrap {
 
         g3.addToImgs(img3)
         g3.save(flush: true)
+
+        /**
+         * Test des services
+         */
+        Utilisateur utilisateurNew = utilisateurService.createUtilisateur(nom:"Valentin", prenom: "Marie", login: "Il_Italiana", mdp: "MValentin", mail: "mv@civ.com")
+        Commentaire commentaireNew = commentaireService.createCommentaire(titre: "titreNew01", texte: "texteNew01", note: 1, utilisateur: utilisateurNew)
+        Image imageNew = imageService.createImage(name: "image 44", path: "/usr/benathmane/img44.png")
+        Poi poiNew = poiService.createPoi(nom: "P229999999", lieu:"Valbonne", description: "Poi P229999999 Test Service", imgs: imageNew)
     }
     def destroy = {
     }
