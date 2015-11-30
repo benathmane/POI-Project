@@ -101,7 +101,10 @@ class UtilisateurController {
         }
     }
 
-    def login()
-    {
+    def login() {
+    }
+
+    def redirection() {
+        redirect(uri: "/accueil")
     }
 }

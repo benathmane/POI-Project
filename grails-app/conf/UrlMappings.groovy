@@ -8,7 +8,7 @@ class UrlMappings {
         }
         "/"(controller: 'utilisateur', action: 'login')
 
-        /*"/"(view:"/index")*/
+        "/accueil"(view:"/index")
         //"/"(view:"/login")
         "500"(view:'/error')
 	}

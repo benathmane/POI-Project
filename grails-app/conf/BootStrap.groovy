@@ -14,21 +14,23 @@ class BootStrap {
     ImageService imageService
     PoiService poiService
     CommentaireService commentaireService
+    Cryptage cryptage = new Cryptage();
 
     def init = { servletContext ->
+
         Utilisateur u = new Utilisateur()
         /* 5 utilisateurs différents */
         u.nom = "AdminNon"
         u.prenom = "AdminPrenom"
         u.mail = "admin@admin.admin"
         u.login = "admin"
-        u.mdp = "admin"
+        u.mdp = cryptage.encrypt("admin")
         u.save(flush: true)
 
-        Utilisateur u1 = new Utilisateur(nom:"Benathmane", prenom: "Ayoub", login: "Il_Principino", mdp: "ayoubben", mail: "ab@mbds.com").save(flush: true)
-        Utilisateur u2 = new Utilisateur(nom:"Boughzaf", prenom: "Nabil", login: "Il_Cheikh", mdp: "nabilbough", mail: "nb@mbds.com").save(flush: true)
-        Utilisateur u3 = new Utilisateur(nom:"Saidi", prenom: "Marwen", login: "Il_Tounsi", mdp: "marwensai", mail: "ms@mbds.com").save(flush: true)
-        Utilisateur u4 = new Utilisateur(nom:"Aalalou", prenom: "Soufiane", login: "Il_Aw", mdp: "soufianeaal", mail: "sa@hh.com").save(flush: true)
+        Utilisateur u1 = new Utilisateur(nom:"Benathmane", prenom: "Ayoub", login: "Il_Principino", mdp: cryptage.encrypt("ayoubben"), mail: "ab@mbds.com").save(flush: true)
+        Utilisateur u2 = new Utilisateur(nom:"Boughzaf", prenom: "Nabil", login: "Il_Cheikh", mdp: cryptage.encrypt("nabilbough"), mail: "nb@mbds.com").save(flush: true)
+        Utilisateur u3 = new Utilisateur(nom:"Saidi", prenom: "Marwen", login: "Il_Tounsi", mdp: cryptage.encrypt("marwensai"), mail: "ms@mbds.com").save(flush: true)
+        Utilisateur u4 = new Utilisateur(nom:"Aalalou", prenom: "Soufiane", login: "Il_Aw", mdp: cryptage.encrypt("soufianeaal"), mail: "sa@hh.com").save(flush: true)
 
         /* 3 groupes différents */
         GroupePois g1  = new GroupePois(nom: "Groupe No 1").save(flush: true)
@@ -214,7 +216,7 @@ class BootStrap {
         /**
          * Test des services
          */
-        Utilisateur utilisateurNew = utilisateurService.createUtilisateur(nom:"Valentin", prenom: "Marie", login: "Il_Italiana", mdp: "MValentin", mail: "mv@civ.com")
+        Utilisateur utilisateurNew = utilisateurService.createUtilisateur(nom:"Valentin", prenom: "Marie", login: "Il_Italiana", mdp: cryptage.encrypt("MValentin"), mail: "mv@civ.com")
         Commentaire commentaireNew = commentaireService.createCommentaire(titre: "titreNew01", texte: "texteNew01", note: 1, utilisateur: utilisateurNew)
         Image imageNew = imageService.createImage(name: "image 44", path: "/usr/benathmane/img44.png")
         Poi poiNew = poiService.createPoi(nom: "P229999999", lieu:"Valbonne", description: "Poi P229999999 Test Service", imgs: imageNew)

@@ -43,7 +43,7 @@
 						<td>${fieldValue(bean: commentaireInstance, field: "texte")}</td>
 					
 						<td>${fieldValue(bean: commentaireInstance, field: "note")}</td>
-					
+
 						<td>${fieldValue(bean: commentaireInstance, field: "utilisateur")}</td>
 					
 					</tr>

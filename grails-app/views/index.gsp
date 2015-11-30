@@ -83,7 +83,7 @@
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
-			<h1>Application Status</h1>
+			<!--<h1>Application Status</h1>
 			<ul>
 				<li>App version: <g:meta name="app.version"/></li>
 				<li>Grails version: <g:meta name="app.grails.version"/></li>
@@ -100,7 +100,20 @@
 				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
 					<li>${plugin.name} - ${plugin.version}</li>
 				</g:each>
-			</ul>
+			</ul>-->
+			<div id="controller-list" role="navigation">
+				<h2>Menu</h2>
+				<ul>
+					<!--<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+					</g:each>-->
+					<li class="controller"><a href="/TDGrails/commentaire/index">Commentaire</a></li>
+					<li class="controller"><a href="/TDGrails/groupePois/index">Groupe Pois</a></li>
+					<li class="controller"><a href="/TDGrails/image/index">Image</a></li>
+					<li class="controller"><a href="/TDGrails/poi/index">Poi</a></li>
+					<li class="controller"><a href="/TDGrails/utilisateur/index">Utilisateur</a></li>
+				</ul>
+			</div>
 		</div>
 		<div id="page-body" role="main">
 			<h1>Welcome to Grails</h1>
@@ -109,14 +122,14 @@
 			   content you may choose. Below is a list of controllers that are currently deployed in this application,
 			   click on each to execute its default action:</p>
 
-			<div id="controller-list" role="navigation">
+			<!--<div id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>
 				<ul>
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
 					</g:each>
 				</ul>
-			</div>
+			</div>-->
 		</div>
 	</body>
 </html>
