@@ -1,5 +1,6 @@
 import tdgrails.Commentaire
 import tdgrails.CommentaireService
+import tdgrails.Cryptage
 import tdgrails.GroupePois
 import tdgrails.Image
 import tdgrails.ImageService

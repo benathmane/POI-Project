@@ -79,7 +79,7 @@
         width: 398px;
         border: 1px solid #ddd;
         font-weight: bold;
-        color: #e73c00;;
+        color: #e73c00;
         text-shadow: -1px 1px 1px #aaa;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
@@ -91,6 +91,11 @@
 
     input:valid {
         background-color: lightgreen;
+    }
+
+    .message{
+        color: #D8000C;
+        font-weight: bold;
     }
 
     #contact input[type="submit"] {
@@ -122,7 +127,10 @@
 
 <body>
 <div id="contact">
-    <h2>Autentification</h2>
+    <h2>Authentification</h2>
+    <g:if test="${flash.message}">
+        <div class="message" role="status">${flash.message}</div>
+    </g:if>
 
     <g:form id="ContactForm" controller="utilisateur" method="post" action="redirection">
 

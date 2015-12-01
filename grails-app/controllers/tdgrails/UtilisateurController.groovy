@@ -7,6 +7,8 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class UtilisateurController {
 
+    Cryptage cryptage = new Cryptage();
+
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -105,6 +107,21 @@ class UtilisateurController {
     }
 
     def redirection() {
-        redirect(uri: "/accueil")
+        if (params.login != null) {
+            def Utilisateur = Utilisateur.findByLogin(params.login)
+
+            if (Utilisateur != null) {
+
+                if (cryptage.decrypt(Utilisateur.mdp) == params.password) {
+                    session.Utilisateur = Utilisateur.login
+                    session.nom = Utilisateur.nom
+                    session.prenom = Utilisateur.prenom
+                    session.mail = Utilisateur.mail
+                    return redirect(uri: "/accueil")
+                }
+            }
+        }
+        flash.message = "Votre login ${params.login} ou votre mot de passe est invalide."
+        redirect(uri: "/")
     }
 }
