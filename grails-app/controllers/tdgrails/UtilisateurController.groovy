@@ -35,7 +35,7 @@ class UtilisateurController {
             respond utilisateurInstance.errors, view: 'create'
             return
         }
-
+        utilisateurInstance.mdp = cryptage.encrypt(utilisateurInstance.mdp)
         utilisateurInstance.save flush: true
 
         request.withFormat {

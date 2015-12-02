@@ -1,4 +1,9 @@
 <%@ page import="tdgrails.GroupePois" %>
+<g:if test="${!session.nom}">
+    <div><a href="${createLink(action:'logout',controller:'Utilisateur')}">Veuillez vous connectez</a> </div>
+</g:if>
+
+<g:else>
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,3 +82,4 @@
 </div>
 </body>
 </html>
+</g:else>
