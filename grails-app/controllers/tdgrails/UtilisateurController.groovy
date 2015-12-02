@@ -124,4 +124,9 @@ class UtilisateurController {
         flash.message = "Votre login ${params.login} ou votre mot de passe est invalide."
         redirect(uri: "/")
     }
+
+    def logout() {
+        session.invalidate()
+        redirect(uri: "/")
+    }
 }

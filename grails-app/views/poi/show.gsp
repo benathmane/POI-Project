@@ -13,7 +13,7 @@
 
 <div class="nav" role="navigation">
     <ul>
-        <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+        <li><a class="home" href="${createLink(uri: '/accueil')}"><g:message code="default.home.label"/></a></li>
         <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]"/></g:link></li>
         <li><g:link class="create" action="create"><g:message code="default.new.label"
                                                               args="[entityName]"/></g:link></li>
@@ -66,7 +66,7 @@
                 <g:each in="${poiInstance.comments}" var="c">
                     <span class="property-value" aria-labelledby="comments-label"><g:link controller="commentaire"
                                                                                           action="show"
-                                                                                          id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+                                                                                          id="${c.id}">${c.titre}</g:link></span>
                 </g:each>
 
             </li>
@@ -78,7 +78,7 @@
 
                 <g:each in="${poiInstance.imgs}" var="i">
                     <span class="property-value" aria-labelledby="imgs-label"><g:link controller="image" action="show"
-                                                                                      id="${i.id}">${i?.encodeAsHTML()}</g:link></span>
+                                                                                      id="${i.id}">${i?.name}</g:link></span>
                 </g:each>
 
             </li>

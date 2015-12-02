@@ -11,7 +11,7 @@
 		<a href="#show-commentaire" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				<li><a class="home" href="${createLink(uri: '/accueil')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
@@ -54,7 +54,7 @@
 				<li class="fieldcontain">
 					<span id="utilisateur-label" class="property-label"><g:message code="commentaire.utilisateur.label" default="Utilisateur" /></span>
 					
-						<span class="property-value" aria-labelledby="utilisateur-label"><g:link controller="utilisateur" action="show" id="${commentaireInstance?.utilisateur?.id}">${commentaireInstance?.utilisateur?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="utilisateur-label"><g:link controller="utilisateur" action="show" id="${commentaireInstance?.utilisateur?.id}">${commentaireInstance?.utilisateur.login}</g:link></span>
 					
 				</li>
 				</g:if>

@@ -13,7 +13,7 @@
 
 <div class="nav" role="navigation">
     <ul>
-        <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+        <li><a class="home" href="${createLink(uri: '/accueil')}"><g:message code="default.home.label"/></a></li>
         <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]"/></g:link></li>
         <li><g:link class="create" action="create"><g:message code="default.new.label"
                                                               args="[entityName]"/></g:link></li>
@@ -27,6 +27,17 @@
     </g:if>
     <ol class="property-list groupePois">
 
+        <g:if test="${groupePoisInstance?.nom}">
+            <li class="fieldcontain">
+                <span id="nom-label" class="property-label"><g:message code="groupePois.nom.label"
+                                                                       default="Nom"/></span>
+
+                <span class="property-value" aria-labelledby="nom-label"><g:fieldValue bean="${groupePoisInstance}"
+                                                                                       field="nom"/></span>
+
+            </li>
+        </g:if>
+
         <g:if test="${groupePoisInstance?.pois}">
             <li class="fieldcontain">
                 <span id="pois-label" class="property-label"><g:message code="groupePois.pois.label"
@@ -34,7 +45,7 @@
 
                 <g:each in="${groupePoisInstance.pois}" var="p">
                     <span class="property-value" aria-labelledby="pois-label"><g:link controller="poi" action="show"
-                                                                                      id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+                                                                                      id="${p.id}">${p.nom}</g:link></span>
                 </g:each>
 
             </li>
@@ -47,19 +58,8 @@
 
                 <g:each in="${groupePoisInstance.imgs}" var="i">
                     <span class="property-value" aria-labelledby="imgs-label"><g:link controller="image" action="show"
-                                                                                      id="${i.id}">${i?.encodeAsHTML()}</g:link></span>
+                                                                                      id="${i.id}">${i.name}</g:link></span>
                 </g:each>
-
-            </li>
-        </g:if>
-
-        <g:if test="${groupePoisInstance?.nom}">
-            <li class="fieldcontain">
-                <span id="nom-label" class="property-label"><g:message code="groupePois.nom.label"
-                                                                       default="Nom"/></span>
-
-                <span class="property-value" aria-labelledby="nom-label"><g:fieldValue bean="${groupePoisInstance}"
-                                                                                       field="nom"/></span>
 
             </li>
         </g:if>

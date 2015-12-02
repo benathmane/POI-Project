@@ -217,7 +217,7 @@ class BootStrap {
         /**
          * Test des services
          */
-        Utilisateur utilisateurNew = utilisateurService.createUtilisateur(nom:"Valentin", prenom: "Marie", login: "Il_Italiana", mdp: cryptage.encrypt("MValentin"), mail: "mv@civ.com")
+        Utilisateur utilisateurNew = utilisateurService.createUtilisateur(nom:"Valentina", prenom: "Oxia", login: "Il_Italiana", mdp: cryptage.encrypt("MValentin"), mail: "mv@civ.com")
         Commentaire commentaireNew = commentaireService.createCommentaire(titre: "titreNew01", texte: "texteNew01", note: 1, utilisateur: utilisateurNew)
         Image imageNew = imageService.createImage(name: "image 44", path: "/usr/benathmane/img44.png")
         Poi poiNew = poiService.createPoi(nom: "P229999999", lieu:"Valbonne", description: "Poi P229999999 Test Service", imgs: imageNew)
