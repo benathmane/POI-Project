@@ -5,6 +5,7 @@
   Time: 14:36
 --%>
 
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="tdgrails.Utilisateur" %>
 <head>
     <title></title>
@@ -45,9 +46,50 @@
         </g:if>
         </ol>
         <br/><br/>
-        <g:if test="${u.login == session.login}">
-            <h1>Edit</h1>
-            <b>Edit</b>
+        <g:if test="${u.id == session.Utilisateur.id}">
+            <h1>
+                Changer les informations personnelles
+            </h1>
+            <g:form controller="front" action="modifierInfos" method="POST">
+                <ol class="property-list">
+                    <li class="fieldcontain">
+                        <span id="nom-label" class="property-label">Nouveau nom :</span>
+                        <g:textField name="nom" value="${session.Utilisateur.nom}"/>
+                    </li>
+                    <li class="fieldcontain">
+                        <span id="prenom-label" class="property-label">Nouveau prenom :</span>
+                        <g:textField name="prenom" value="${session.Utilisateur.prenom}"/>
+                    </li>
+                    <li class="fieldcontain">
+                        <g:submitButton name="buttonmodifierInfos" value="Modifier"/>
+                    </li>
+                </ol>
+            </g:form>
+            <ol class="property-list">
+                <li class="fieldcontain">
+                    ${flash.messagemodifierInfos}
+                </li></ol>
+            <br/><br/>
+
+            <h1>
+                Changer le mot de passe
+            </h1>
+            <g:form controller="front" action="modifierPass" method="POST">
+                <ol class="property-list">
+                    <li class="fieldcontain">
+                        <label>Nouveau mot de passe :</label>
+                        <g:field type="password" name="mdp"/>
+                    </li>
+
+                    <li class="fieldcontain">
+                        <g:submitButton name="buttonmodifierPass" value="Modifier"/>
+                    </li>
+                </ol>
+            </g:form>
+            <ol class="property-list">
+                <li class="fieldcontain">
+                    ${flash.messagemodifierPass}
+                </li></ol>
         </g:if>
 
     </g:each>

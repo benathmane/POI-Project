@@ -113,7 +113,7 @@ class UtilisateurController {
             if (Utilisateur != null) {
 
                 if (cryptage.decrypt(Utilisateur.mdp) == params.password) {
-                    session.Utilisateur = Utilisateur.login
+                    session.Utilisateur = Utilisateur
                     session.login = Utilisateur.login
                     session.nom = Utilisateur.nom
                     session.prenom = Utilisateur.prenom
