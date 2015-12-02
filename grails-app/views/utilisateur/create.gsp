@@ -1,5 +1,5 @@
 <g:if test="${!session.utilisateur}">
-    <div class="exceptionMessage">Veuillez vous connectez</div>
+    <div><a href="${createLink(action:'logout',controller:'Utilisateur')}">Veuillez vous connectez</a> </div>
 </g:if>
 
 <g:else>
