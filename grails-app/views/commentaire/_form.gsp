@@ -31,10 +31,10 @@
 
 <div class="fieldcontain ${hasErrors(bean: commentaireInstance, field: 'utilisateur', 'error')} ">
 	<label for="utilisateur">
-		<g:message code="commentaire.utilisateur.label" default="Utilisateur" />
-		
+		<g:message code="commentaire.utilisateur.label" default="Utilisateur"  />
+
 	</label>
-	<g:select id="utilisateur" name="utilisateur.id" from="${tdgrails.Utilisateur.list()}" optionKey="id" value="${commentaireInstance?.utilisateur?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select id="utilisateur" name="utilisateur.id" from="${tdgrails.Utilisateur.list().login}" value="${commentaireInstance?.utilisateur?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 

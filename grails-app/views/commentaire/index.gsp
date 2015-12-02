@@ -44,7 +44,7 @@
 					
 						<td>${fieldValue(bean: commentaireInstance, field: "note")}</td>
 
-						<td>${fieldValue(bean: commentaireInstance, field: "utilisateur")}</td>
+						<td>${fieldValue(bean: commentaireInstance, field: "utilisateur.login")}</td>
 					
 					</tr>
 				</g:each>

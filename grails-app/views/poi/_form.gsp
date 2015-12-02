@@ -34,7 +34,7 @@
         <g:message code="poi.comments.label" default="Comments"/>
 
     </label>
-    <g:select name="comments" from="${tdgrails.Commentaire.list()}" multiple="multiple" optionKey="id" size="5"
+    <g:select name="comments" from="${tdgrails.Commentaire.list().titre}" multiple="multiple" size="5"
               value="${poiInstance?.comments*.id}" class="many-to-many"/>
 
 </div>
@@ -44,7 +44,7 @@
         <g:message code="poi.imgs.label" default="Imgs"/>
 
     </label>
-    <g:select name="imgs" from="${tdgrails.Image.list()}" multiple="multiple" optionKey="id" size="5"
+    <g:select name="imgs" from="${tdgrails.Image.list().name}" multiple="multiple" size="5"
               value="${poiInstance?.imgs*.id}" class="many-to-many"/>
 
 </div>
