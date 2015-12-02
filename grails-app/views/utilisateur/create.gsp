@@ -1,3 +1,8 @@
+<g:if test="${!session.utilisateur}">
+    <div class="exceptionMessage">Veuillez vous connectez</div>
+</g:if>
+
+<g:else>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,3 +47,4 @@
 </div>
 </body>
 </html>
+</g:else>
