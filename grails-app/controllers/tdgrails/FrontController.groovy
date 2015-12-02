@@ -6,9 +6,12 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class FrontController {
 
-    def index(Integer max) {
-        def List<Utilisateur> listOfUtilisateurs = Utilisateur.getAll()
-        render(view: "index", model: [u: listOfUtilisateurs])
+    String listOfUtilisateurs;
+
+    def index() {
+        //def List<Utilisateur> listOfUtilisateurs = Utilisateur.getAll()
+        //[u: Utilisateur.getAll()]
+        [listOfUtilisateurs: Utilisateur.getAll()]
     }
 
     def show(Utilisateur utilisateurInstance) {
