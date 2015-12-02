@@ -44,7 +44,12 @@
             </g:each>
         </g:if>
         </ol>
-        <br/>
+        <br/><br/>
+        <g:if test="${u.login == session.login}">
+            <h1>Edit</h1>
+            <b>Edit</b>
+        </g:if>
+
     </g:each>
 </div>
 </body>

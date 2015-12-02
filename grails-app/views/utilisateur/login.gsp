@@ -32,17 +32,6 @@
             <input type='password' name='password' required/>
         </p>
         <input type='submit' name='Creation' value="Connecter"/>
-
-        <div class="col-xs-7">
-            <div class="checkbox">
-                <label>
-                    <input type='checkbox' name='_spring_security_remember_me' id='remember_me'
-                           <g:if test='${hasCookie}'>checked='checked'</g:if>/>
-                    <g:message code="springSecurity.login.remember.me.label"/>
-                </label>
-            </div>
-        </div>
-
     </g:form>
 </div>
 

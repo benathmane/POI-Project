@@ -115,15 +115,3 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
-grails.plugins.springsecurity.providerNames = [
-        'rememberMeAuthenticationProvider'
-]
-
-grails.plugin.springsecurity.rememberMe.cookieName='grails_remember_me'
-grails.plugin.springsecurity.rememberMe.alwaysRemember=true
-grails.plugin.springsecurity.rememberMe.tokenValiditySeconds=31*24*60*60
-grails.plugin.springsecurity.rememberMe.parameter='_spring_security_remember_me'
-grails.plugin.springsecurity.rememberMe.key='monitoringApp'
-grails.plugin.springsecurity.rememberMe.useSecureCookie=false
-grails.plugin.springsecurity.rememberMe.persistent=false
-grails.plugin.databasemigration.updateOnStart = true
