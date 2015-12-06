@@ -61,7 +61,10 @@
                         <g:textField name="prenom" value="${session.Utilisateur.prenom}"/>
                     </li>
                     <li class="fieldcontain">
-                        <g:submitButton name="buttonmodifierInfos" value="Modifier"/>
+
+                        <fieldset class="buttons">
+                            <g:submitButton name="buttonmodifierInfos" value="Modifier"/>
+                        </fieldset>
                     </li>
                 </ol>
             </g:form>
@@ -82,7 +85,9 @@
                     </li>
 
                     <li class="fieldcontain">
-                        <g:submitButton name="buttonmodifierPass" value="Modifier"/>
+                        <fieldset class="buttons">
+                            <g:submitButton name="buttonmodifierPass" value="Modifier"/>
+                        </fieldset>
                     </li>
                 </ol>
             </g:form>
