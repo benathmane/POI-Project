@@ -124,17 +124,33 @@ class BootStrap {
         Commentaire co3313 = new  Commentaire(titre: "titre13", texte: "texte13", note: 13, utilisateur: u2).save(flush: true)
         Commentaire co3414 = new  Commentaire(titre: "titre14", texte: "texte14", note: 14, utilisateur: u2).save(flush: true)
         Commentaire co3515 = new  Commentaire(titre: "titre15", texte: "texte15", note: 15, utilisateur: u1).save(flush: true)
+        Commentaire co1141 = new  Commentaire(titre: "Admin : Titre 1", texte: "texte BlaBla1", note: 5, utilisateur: u).save(flush: true)
+        Commentaire co1115 = new  Commentaire(titre: "Admin : Titre 2", texte: "texte1 BlaBla2", note: 4, utilisateur: u).save(flush: true)
+        Commentaire co1116 = new  Commentaire(titre: "Admin : Titre 3", texte: "texte1BlaBla3", note: 3, utilisateur: u).save(flush: true)
+        Commentaire co1111 = new  Commentaire(titre: "Admin : Titre 4", texte: "texte1 BlaBla4", note: 2, utilisateur: u).save(flush: true)
 
         p11.addToComments(co111)
+        p11.save(flush: true)
+
+        p11.addToComments(co1141)
         p11.save(flush: true)
 
         p12.addToComments(co122)
         p12.save(flush: true)
 
+        p12.addToComments(co1115)
+        p12.save(flush: true)
+
         p13.addToComments(co133)
         p13.save(flush: true)
 
+        p13.addToComments(co1116)
+        p13.save(flush: true)
+
         p14.addToComments(co144)
+        p14.save(flush: true)
+
+        p14.addToComments(co1111)
         p14.save(flush: true)
 
         p15.addToComments(co155)
