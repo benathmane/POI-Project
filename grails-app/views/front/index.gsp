@@ -50,6 +50,9 @@
             <h1>
                 Changer les informations personnelles
             </h1>
+            <g:if test="${flash.messagemodifierInfos}">
+                <div class="message" role="status">${flash.messagemodifierInfos}</div>
+            </g:if>
             <g:form controller="front" action="modifierInfos" method="POST">
                 <ol class="property-list">
                     <li class="fieldcontain">
@@ -68,15 +71,13 @@
                     </li>
                 </ol>
             </g:form>
-            <ol class="property-list">
-                <li class="fieldcontain">
-                    ${flash.messagemodifierInfos}
-                </li></ol>
-            <br/><br/>
 
             <h1>
                 Changer le mot de passe
             </h1>
+            <g:if test="${flash.messagemodifierPass}">
+                <div class="message" role="status">${flash.messagemodifierPass}</div>
+            </g:if>
             <g:form controller="front" action="modifierPass" method="POST">
                 <ol class="property-list">
                     <li class="fieldcontain">
@@ -91,10 +92,6 @@
                     </li>
                 </ol>
             </g:form>
-            <ol class="property-list">
-                <li class="fieldcontain">
-                    ${flash.messagemodifierPass}
-                </li></ol>
         </g:if>
 
     </g:each>
