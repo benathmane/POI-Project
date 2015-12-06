@@ -46,7 +46,7 @@
 
     <ul class="one-to-many">
         <g:each in="${utilisateurInstance?.commentaire ?}" var="c">
-            <li><g:link controller="commentaire" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></li>
+            <li><g:link controller="commentaire" action="show" id="${c.id}">${c.titre}</g:link></li>
         </g:each>
         <li class="add">
             <g:link controller="commentaire" action="create"
