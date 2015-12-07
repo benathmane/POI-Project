@@ -46,13 +46,40 @@
         <h1>Liste des commentaires</h1>
         <g:if test="p.comments">
             <ol class="property-list">
-            <g:each in="${p.comments}" var="c">
-                <g:link controller="commentaire"
-                        action="show"
-                        id="${c.id}">${c.titre}</g:link><br/>
-            </g:each>
+                <g:each in="${p.comments}" var="c">
+                    <g:link controller="commentaire"
+                            action="show"
+                            id="${c.id}">${c.titre}</g:link><br/>
+                </g:each>
+            </ol>
         </g:if>
-        </ol>
+        <br/>
+
+        <h1>Ajouter un commentaire</h1>
+
+        <g:form controller="frontPoi" action="addComment" method="POST">
+            <g:textField name="id" value="${p.id}" hidden="hidden"/>
+            <ol class="property-list">
+                <li class="fieldcontain">
+                    <span id="titre-label" class="property-label">Titre :</span>
+                    <g:textField name="titre"/>
+                </li>
+                <li class="fieldcontain">
+                    <span id="texte-label" class="property-label">Texte :</span>
+                    <g:textArea name="texte" rows="5" cols="40"/>
+                </li>
+                <li class="fieldcontain">
+                    <span id="note-label" class="property-label">Note :</span>
+                    <g:field type="number" min="0" max="20" name="note"/>
+                </li>
+                <li class="fieldcontain">
+                    <fieldset class="buttons">
+                        <g:submitButton name="buttonAddComment" value="Ajouter commentaire"/>
+                    </fieldset>
+                </li>
+            </ol>
+        </g:form>
         <br/><br/>
     </g:each>
 </div>
+</html>

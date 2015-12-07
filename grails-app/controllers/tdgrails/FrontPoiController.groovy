@@ -31,4 +31,14 @@ class FrontPoiController {
         flash.messagemodifierPInfos = "Les informations sont bien modifieees"
         redirect(uri: "/fpoi/" + poi.id)
     }
+
+    def addComment(){
+        Poi poi = Poi.findById(params.id)
+        Utilisateur utilisateur = Utilisateur.findById(session.Utilisateur.id)
+        Commentaire commentaire = new  Commentaire(titre: params.get("titre"), texte: params.get("texte"), note: params.get("note"), utilisateur: utilisateur).save(flush: true)
+        poi.addToComments(commentaire)
+        poi.save(flush: true)
+        flash.messagemodifierPInfos = "Le commentaire a bien ete ajoute"
+        redirect(uri: "/fpoi/" + poi.id)
+    }
 }

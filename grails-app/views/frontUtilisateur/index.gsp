@@ -12,6 +12,12 @@
     <meta name="layout" content="main">
 </head>
 
+<div class="nav" role="navigation">
+    <ul>
+        <li><a class="home" href="${createLink(uri: '/accueil')}"><g:message code="default.home.label"/></a></li>
+    </ul>
+</div>
+
 <div class="content scaffold-show" role="main">
     <h1>Les informations personnelles</h1>
     <g:each in="${listOfUtilisateurs}" var="u">

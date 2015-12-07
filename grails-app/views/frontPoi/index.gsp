@@ -35,6 +35,12 @@
     </style>
 </head>
 
+<div class="nav" role="navigation">
+    <ul>
+        <li><a class="home" href="${createLink(uri: '/accueil')}"><g:message code="default.home.label"/></a></li>
+    </ul>
+</div>
+
 <div class="content scaffold-show" role="main">
     <h1>La liste des Pois</h1>
     <table  id="t01">
