@@ -15,14 +15,20 @@ class FrontGroupController {
     }
 
     def edit(@RequestParameter('id') String id) {
-        [GroupePois: GroupePois.findById(id)]
+        [EgroupePois: GroupePois.findById(id)]
     }
 
     def create() {
-        redirect(controller: "GroupePois",action: "create")
+        redirect(controller: "GroupePois", action: "create")
     }
 
-    def save() {
+    def save(@RequestParameter('id') String id) {
+        GroupePois groupePois = GroupePois.findById(id)
+        groupePois.nom = params.get("nom")
+        groupePois.save()
+        flash.messagemodifierPass = "Les informations sont bien modifiées"
+
+
 
     }
 }
