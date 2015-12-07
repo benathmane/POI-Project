@@ -17,7 +17,7 @@
         <li><a class="home" href="${createLink(uri: '/accueil')}"><g:message code="default.home.label"/></a></li>
         <li><g:link class="list" action="index">Retour</g:link></li>
         <li><g:link class="create" action="create">Creer</g:link></li>
-        <li><g:link class="edit" action="edit">Editer</g:link></li>
+        <li><a href="${Poi.id}/edit">Editer</a></li>
     </ul>
 </div>
 <div class="content scaffold-show" role="main">

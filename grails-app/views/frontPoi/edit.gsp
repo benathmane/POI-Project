@@ -17,7 +17,7 @@
         <li><a class="home" href="${createLink(uri: '/accueil')}"><g:message code="default.home.label"/></a></li>
         <li><g:link class="list" action="index">Retour</g:link></li>
         <li><g:link class="create" action="create">Creer</g:link></li>
-        <li><g:link class="edit" action="edit">Editer</g:link></li>
+        <li><a href="${Epoi.id}/edit">Editer</a></li>
     </ul>
 </div>
 <g class="content scaffold-show" role="main">
@@ -26,6 +26,7 @@
     </h1>
     <g:each in="${Epoi}" var="p">
         <g:form controller="frontPoi" action="save" method="POST">
+
         </g:form>
         <br/><br/>
     </g:each>
