@@ -29,6 +29,6 @@ class FrontGroupController {
     }
 
     def create() {
-        respond new GroupePois(params)
+        redirect(controller: "GroupePois",action: "create")
     }
 }
