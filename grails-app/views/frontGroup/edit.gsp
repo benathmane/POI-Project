@@ -6,7 +6,6 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
-<html>
 <head>
     <title></title>
     <meta name="layout" content="main">
@@ -27,24 +26,23 @@
     </h1>
     <g:each in="${EgroupePois}" var="g">
         <g:form controller="frontGroup" action="save" method="POST">
-        </g:form>
-        <h1>
-            Modifier les information du groupe
-        </h1>
-        <ol class="property-list">
-            <li class="fieldcontain">
-                <span id="nom-label" class="property-label">Nouveau nom :</span>
-                <g:textField name="nom" value="${EgroupePois.nom}"/>
-            </li>
+            <h1>
+                Modifier les information du groupe
+            </h1>
+            <g:textField name="id" value="${EgroupePois.id}" hidden="hidden"/>
+            <ol class="property-list">
+                <li class="fieldcontain">
+                    <span id="nom-label" class="property-label">Nouveau nom :</span>
+                    <g:textField name="nom" value="${EgroupePois.nom}"/>
+                </li>
 
-            <li class="fieldcontain">
-                <fieldset class="buttons">
-                    <g:submitButton name="buttonmodifierInfos" value="Modifier"/>
-                </fieldset>
-            </li>
-        </ol>
-        <br/><br/>
+                <li class="fieldcontain">
+                    <fieldset class="buttons">
+                        <g:submitButton name="buttonmodifierInfos" value="Modifier"/>
+                    </fieldset>
+                </li>
+            </ol>
+        </g:form>
     </g:each>
 </div>
 <br/><br/>
-</html>

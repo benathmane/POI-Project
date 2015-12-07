@@ -53,7 +53,7 @@
             <tr>
                 <td>
                     <span class="property-value" aria-labelledby="nom-label"><a
-                            href="TDGrails/fgroupe/${g.id}">${g.nom}</a>
+                            href="${g.id}">${g.nom}</a>
                     </span>
                 </td>
 

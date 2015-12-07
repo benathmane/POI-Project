@@ -22,13 +22,11 @@ class FrontGroupController {
         redirect(controller: "GroupePois", action: "create")
     }
 
-    def save(@RequestParameter('id') String id) {
-        GroupePois groupePois = GroupePois.findById(id)
+    def save() {
+        GroupePois groupePois = GroupePois.findById(params.id)
         groupePois.nom = params.get("nom")
         groupePois.save()
-        flash.messagemodifierPass = "Les informations sont bien modifiées"
-
-
-
+        flash.messageFGmodifier = "Les informations sont bien modifieees"
+        redirect(uri: "/fgroup/" + groupePois.id)
     }
 }

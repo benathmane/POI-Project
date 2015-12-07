@@ -20,6 +20,7 @@
         <li><a href="${Poi.id}/edit">Editer</a></li>
     </ul>
 </div>
+
 <div class="content scaffold-show" role="main">
     <g:if test="${flash.messagemodifierPInfos}">
         <div class="message" role="status">${flash.messagemodifierPInfos}</div>

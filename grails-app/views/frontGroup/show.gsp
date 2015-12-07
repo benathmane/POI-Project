@@ -17,12 +17,15 @@
         <li><a class="home" href="${createLink(uri: '/accueil')}"><g:message code="default.home.label"/></a></li>
         <li><g:link class="list" action="index">Retour</g:link></li>
         <li><g:link class="create" action="create">Creer</g:link></li>
-        <li><g:link class="edit" action="edit">Editer</g:link></li>
+        <li><a href="${GroupePois.id}/edit">Editer</a></li>
     </ul>
 </div>
 
 <div class="content scaffold-show" role="main">
     <h1>Informations Poi</h1>
+    <g:if test="${flash.messageFGmodifier}">
+        <div class="message" role="status">${flash.messageFGmodifier}</div>
+    </g:if>
     <g:each in="${GroupePois}" var="g">
         <ol class="property-list">
             <li class="fieldcontain">
@@ -35,10 +38,11 @@
         <g:if test="g.pois">
             <ol class="property-list">
             <g:each in="${g.pois}" var="p">
-                <g:link controller="poi"
+                <g:link controller="frontPoi"
                         action="show"
                         id="${p.id}">${p.nom}</g:link><br/>
             </g:each>
+            </ol>
         </g:if>
 
         <h1>Liste des images</h1>
@@ -53,5 +57,3 @@
         </ol>
         <br/><br/>
     </g:each>
-
-</html>
