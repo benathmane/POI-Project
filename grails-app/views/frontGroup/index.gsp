@@ -6,30 +6,35 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page import="tdgrails.Poi" %>
+<%@ page import="tdgrails.GroupePois" %>
 
 <head>
     <title></title>
     <meta name="layout" content="main">
     <style>
     table {
-        width:100%;
+        width: 100%;
     }
+
     table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
     }
+
     th, td {
         padding: 5px;
         text-align: left;
     }
+
     table#t01 tr:nth-child(even) {
         background-color: #eee;
     }
+
     table#t01 tr:nth-child(odd) {
-        background-color:#fff;
+        background-color: #fff;
     }
-    table#t01 th	{
+
+    table#t01 th {
         background-color: black;
         color: white;
     }
@@ -38,7 +43,7 @@
 
 <div class="content scaffold-show" role="main">
     <h1>La liste des Groupes</h1>
-    <table  id="t01">
+    <table id="t01">
         <tr>
             <td>Nom</td>
             <td>Pois</td>
@@ -51,10 +56,14 @@
                 </td>
 
                 <td>
-                    <span class="property-value" aria-labelledby="lieu-label">${g.pois}</span>
+                    <g:each in="${g.pois}" var="pi">
+                        <li>${pi.nom}</li>
+                    </g:each>
                 </td>
                 <td>
-                    <span class="property-value" aria-labelledby="description-label">${g.imgs}</span>
+                    <g:each in="${g.imgs}" var="im">
+                        <li>${im.name}</li>
+                    </g:each>
                 </td>
             </tr>
         </g:each>
