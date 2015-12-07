@@ -13,8 +13,8 @@ class FrontGroupController {
         [listOfGroups: GroupePois.findAll()]
     }
 
-    def show() {
-
+    def show(@RequestParameter('id') String id) {
+        [GroupePois: GroupePois.findById(id)]
     }
 
     def edit(@RequestParameter('id') String id) {

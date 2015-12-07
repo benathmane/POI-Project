@@ -12,6 +12,7 @@ class UrlMappings {
         "/fpoi/index" (controller: "frontPoi", action: "index")
         "/fpoi/$id" (controller: "frontPoi", action: "show")
         "/fgroup/index" (controller: "frontGroup", action: "index")
+        "/fgroup/$id" (controller: "frontGroup", action: "show")
         "/user/modifierInfos" (controller: "frontUtilisateur", action: "modifierInfos")
         "/user/modifierPass" (controller: "frontUtilisateur", action:"modifierPass")
         "/accueil"(view:"/index")
