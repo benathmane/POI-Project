@@ -17,4 +17,11 @@ class FrontPoiController {
     def create(){
         redirect(controller: "Poi", action: "create")
     }
+
+    def edit(@RequestParameter('id') String id) {
+        [Epoi: Poi.findById(id)]
+    }
+
+    def save() {
+    }
 }
