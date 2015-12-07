@@ -52,7 +52,9 @@
         <g:each in="${listOfGroups}" var="g">
             <tr>
                 <td>
-                    <span class="property-value" aria-labelledby="nom-label">${g.nom}</span>
+                    <span class="property-value" aria-labelledby="nom-label"><a
+                            href="TDGrails/fgroupe/${g.id}">${g.nom}</a>
+                    </span>
                 </td>
 
                 <td>
