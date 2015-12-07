@@ -5,7 +5,7 @@ personnes, objets, ce que vous souhaitez de matériel.
 
 Réalisé par : 
 - BENATHMANE Ayoub<br/>
-- BOUGHZAF Nabil<br/>
+- SAIDI Marwen<br/>
 
 TO DO :
 - Faire un if/else pour la variable de session, parceque si on tape /user/1 sans etre connecté, il affiche une erreur<br/>
