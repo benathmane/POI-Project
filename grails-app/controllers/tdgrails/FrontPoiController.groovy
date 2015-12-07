@@ -1,6 +1,11 @@
 package tdgrails
 
+import grails.transaction.Transactional
+
+@Transactional(readOnly = false)
 class FrontPoiController {
 
-    def index() {}
+    def index() {
+        [listOfPois: Poi.findAll()]
+    }
 }
