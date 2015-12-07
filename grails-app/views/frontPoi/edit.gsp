@@ -31,3 +31,31 @@
         <br/><br/>
     </g:each>
 </div>
+
+<br/><br/>
+
+<h1>
+    Modifier les information du poi
+</h1>
+<ol class="property-list">
+    <li class="fieldcontain">
+        <span id="nom-label" class="property-label">Nouveau nom :</span>
+        <g:textField name="nom" value="${tdgrails.Poi.nom}"/>
+    </li>
+
+    <li class="fieldcontain">
+        <span id="lieu-label" class="property-label">Nouveau lieu :</span>
+        <g:textField name="lieu" value="${tdgrails.Poi.lieu}"/>
+    </li>
+
+    <li class="fieldcontain">
+        <span id="description-label" class="property-label">Nouvelle description :</span>
+        <g:textField name="description" value="${tdgrails.Poi.description}"/>
+    </li>
+
+    <li class="fieldcontain">
+        <fieldset class="buttons">
+            <g:submitButton name="buttonmodifierInfos" value="Modifier"/>
+        </fieldset>
+    </li>
+</ol>

@@ -14,7 +14,7 @@ class FrontPoiController {
         [Poi: Poi.findById(id)]
     }
 
-    def create(){
+    def create() {
         redirect(controller: "Poi", action: "create")
     }
 
@@ -22,6 +22,11 @@ class FrontPoiController {
         [Epoi: Poi.findById(id)]
     }
 
-    def save() {
+    def save(@RequestParameter('id') String id) {
+        Poi poi = Poi.findById(id)
+        poi.lieu = params.get("lieu")
+        poi.description = params.get("description")
+        poi.save()
+        flash.messagemodifierPass = "Les informations sont bien modifiées"
     }
 }
