@@ -20,7 +20,7 @@
         <li><a href="${Epoi.id}/edit">Editer</a></li>
     </ul>
 </div>
-<g class="content scaffold-show" role="main">
+<div class="content scaffold-show" role="main">
     <h1>
         Modifier le POI
     </h1>
