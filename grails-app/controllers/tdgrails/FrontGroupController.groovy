@@ -6,9 +6,6 @@ import grails.web.RequestParameter
 @Transactional(readOnly = false)
 class FrontGroupController {
 
-    String listOfGroups
-
-
     def index() {
         [listOfGroups: GroupePois.findAll()]
     }
@@ -18,17 +15,14 @@ class FrontGroupController {
     }
 
     def edit(@RequestParameter('id') String id) {
-        GroupePois groupePois = GroupePois.findById(id)
-        groupePois.nom = params.get("nom")
-        groupePois.pois = params.get("poi")
-        groupePois.imgs = params.get("img")
-        groupePois.save()
-        flash.message = "données modifiées"
-
-
+        [GroupePois: GroupePois.findById(id)]
     }
 
     def create() {
         redirect(controller: "GroupePois",action: "create")
+    }
+
+    def save() {
+
     }
 }
