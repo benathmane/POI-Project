@@ -6,7 +6,7 @@ import grails.web.RequestParameter
 
 
 @Transactional(readOnly = false)
-class FrontController {
+class FrontUtilisateurController {
 
     String listOfUtilisateurs;
     Cryptage cryptage = new Cryptage();

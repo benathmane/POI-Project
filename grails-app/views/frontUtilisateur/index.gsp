@@ -53,7 +53,7 @@
             <g:if test="${flash.messagemodifierInfos}">
                 <div class="message" role="status">${flash.messagemodifierInfos}</div>
             </g:if>
-            <g:form controller="front" action="modifierInfos" method="POST">
+            <g:form controller="frontUtilisateur" action="modifierInfos" method="POST">
                 <ol class="property-list">
                     <li class="fieldcontain">
                         <span id="nom-label" class="property-label">Nouveau nom :</span>
@@ -78,7 +78,7 @@
             <g:if test="${flash.messagemodifierPass}">
                 <div class="message" role="status">${flash.messagemodifierPass}</div>
             </g:if>
-            <g:form controller="front" action="modifierPass" method="POST">
+            <g:form controller="frontUtilisateur" action="modifierPass" method="POST">
                 <ol class="property-list">
                     <li class="fieldcontain">
                         <label>Nouveau mot de passe :</label>

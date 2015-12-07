@@ -119,8 +119,8 @@
         <h2>Menu Frontend</h2>
         <ul>
             <li class="controller"><a href="/TDGrails/user/${session.Utilisateur.id}">Page d'utilisateur</a></li>
-            <li class="controller"><a href="/TDGrails/poi/index">Poi</a></li>
-            <li class="controller"><a href="/TDGrails/group/index">Groupe Pois</a></li>
+            <li class="controller"><a href="/TDGrails/fpoi/index">Poi</a></li>
+            <li class="controller"><a href="/TDGrails/fgroup/index">Groupe des Pois</a></li>
         </ul>
     </div>
 </div>
