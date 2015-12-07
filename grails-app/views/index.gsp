@@ -128,6 +128,8 @@
 <div id="page-body" role="main">
     <h1>Bienvenue</h1>
 
+    <g:cookie name="myCookie" />
+    <!--${cookie(name: 'myCookie').dump()}-->
     <p>POI Poject est une plateforme de gestion de points d’intérêts,
     Ces points d’intérêts pourraient être des lieux, personnes, objets, ce que vous souhaitez de matériel.</p>
 

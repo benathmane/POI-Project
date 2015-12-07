@@ -31,6 +31,7 @@
             <label>Mot de passe :</label>
             <input type='password' name='password' required/>
         </p>
+        <p><label></label><input type="checkbox" name="oui" value="oui"/> Remember me</p>
         <input type='submit' name='Creation' value="Connecter"/>
     </g:form>
 </div>

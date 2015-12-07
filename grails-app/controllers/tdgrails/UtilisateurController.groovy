@@ -1,5 +1,6 @@
 package tdgrails
 
+import javax.servlet.http.Cookie
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -118,6 +119,9 @@ class UtilisateurController {
                     session.nom = Utilisateur.nom
                     session.prenom = Utilisateur.prenom
                     session.mail = Utilisateur.mail
+                    def cookie = new Cookie('myCookie', Utilisateur.nom)
+                    cookie.maxAge = 60*60*24
+                    response.addCookie( cookie)
                     return redirect(uri: "/accueil")
                 }
             }
