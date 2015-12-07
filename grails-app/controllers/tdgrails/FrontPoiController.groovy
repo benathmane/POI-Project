@@ -13,4 +13,8 @@ class FrontPoiController {
     def show(@RequestParameter('id') String id) {
         [Poi: Poi.findById(id)]
     }
+
+    def create(){
+        redirect(controller: "Poi", action: "create")
+    }
 }

@@ -57,12 +57,12 @@
 
                 <td>
                     <g:each in="${g.pois}" var="pi">
-                        <li>${pi.nom}</li>
+                        <li><a href="/TDGrails/fpoi/${pi.id}">${pi.nom}</a></li>
                     </g:each>
                 </td>
                 <td>
                     <g:each in="${g.imgs}" var="im">
-                        <li>${im.name}</li>
+                        <li><a href="/TDGrails/image/show/${im.id}">${im.name}</a></li>
                     </g:each>
                 </td>
             </tr>

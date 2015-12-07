@@ -10,7 +10,7 @@ class UrlMappings {
         "/logout"(controller: 'utilisateur', action: 'logout')
         "/user/$id" (controller: "frontUtilisateur", action: "index")
         "/fpoi/index" (controller: "frontPoi", action: "index")
-        "/fpoi/$id/show" (controller: "frontPoi", action: "show")
+        "/fpoi/$id" (controller: "frontPoi", action: "show")
         "/fgroup/index" (controller: "frontGroup", action: "index")
         "/user/modifierInfos" (controller: "frontUtilisateur", action: "modifierInfos")
         "/user/modifierPass" (controller: "frontUtilisateur", action:"modifierPass")

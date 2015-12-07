@@ -46,7 +46,9 @@
         <g:each in="${listOfPois}" var="p">
             <tr>
                 <td>
-                    <span class="property-value" aria-labelledby="nom-label">${p.nom}</span>
+                    <span class="property-value" aria-labelledby="nom-label">
+                        <a href="/TDGrails/fpoi/${p.id}">${p.nom}</a>
+                    </span>
                 </td>
 
                 <td>
