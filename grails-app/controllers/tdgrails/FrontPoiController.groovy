@@ -22,11 +22,13 @@ class FrontPoiController {
         [Epoi: Poi.findById(id)]
     }
 
-    def save(@RequestParameter('id') String id) {
-        Poi poi = Poi.findById(id)
+    def save() {
+        Poi poi = Poi.findById(params.id)
+        poi.nom = params.get("nom")
         poi.lieu = params.get("lieu")
         poi.description = params.get("description")
         poi.save()
-        flash.messagemodifierPass = "Les informations sont bien modifiées"
+        flash.messagemodifierPInfos = "Les informations sont bien modifieees"
+        redirect(uri: "/fpoi/" + poi.id)
     }
 }

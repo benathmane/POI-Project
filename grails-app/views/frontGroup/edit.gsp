@@ -28,24 +28,23 @@
     <g:each in="${EgroupePois}" var="g">
         <g:form controller="frontGroup" action="save" method="POST">
         </g:form>
+        <h1>
+            Modifier les information du groupe
+        </h1>
+        <ol class="property-list">
+            <li class="fieldcontain">
+                <span id="nom-label" class="property-label">Nouveau nom :</span>
+                <g:textField name="nom" value="${EgroupePois.nom}"/>
+            </li>
+
+            <li class="fieldcontain">
+                <fieldset class="buttons">
+                    <g:submitButton name="buttonmodifierInfos" value="Modifier"/>
+                </fieldset>
+            </li>
+        </ol>
         <br/><br/>
     </g:each>
 </div>
 <br/><br/>
-
-<h1>
-    Modifier les information du groupe
-</h1>
-<ol class="property-list">
-    <li class="fieldcontain">
-        <span id="nom-label" class="property-label">Nouveau nom :</span>
-        <g:textField name="nom" value="${tdgrails.GroupePois.nom}"/>
-    </li>
-
-    <li class="fieldcontain">
-        <fieldset class="buttons">
-            <g:submitButton name="buttonmodifierInfos" value="Modifier"/>
-        </fieldset>
-    </li>
-</ol>
 </html>

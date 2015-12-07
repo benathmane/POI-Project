@@ -21,6 +21,9 @@
     </ul>
 </div>
 <div class="content scaffold-show" role="main">
+    <g:if test="${flash.messagemodifierPInfos}">
+        <div class="message" role="status">${flash.messagemodifierPInfos}</div>
+    </g:if>
     <h1>Informations Poi</h1>
     <g:each in="${Poi}" var="p">
         <ol class="property-list">
