@@ -7,7 +7,8 @@ Réalisé par :
 - BENATHMANE Ayoub<br/>
 - SAIDI Marwen<br/>
 
-TO DO :
-- Faire un if/else pour la variable de session, parceque si on tape /user/1 sans etre connecté, il affiche une erreur<br/>
-- Remember me<br/>
-- Faire les bonus, si possible<br/>
+Technologies utilisées :
+- Grails
+- Groovy
+- CSS
+- MySQL
